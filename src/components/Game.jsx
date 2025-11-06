@@ -1,6 +1,7 @@
 // src/components/Game.jsx
 import React, { useState, useEffect } from 'react';
 import gameAPI from '../services/gameAPI';
+import Renderer from './Renderer';
 import './Game.css';
 
 function Game() {
@@ -287,7 +288,12 @@ function Game() {
             New Game 🆕
           </button>
         </section>
+
+        <section className="renderer-section">
+          <Renderer />
+        </section>
       </div>
+      
 
       {loading && <div className="loading-overlay">Processing...</div>}
     </div>
